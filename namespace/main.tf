@@ -2,10 +2,10 @@ resource "kubernetes_namespace" "talant_namespace" {
   metadata {
 
     labels = {
-      mylabel = "${var.namespace_label}"
+      mylabel = var.namespace_label
     }
 
-    name = "${var.namespace_name}"
+    name = var.namespace_name
   }
 }
 
